@@ -11,7 +11,9 @@ sudo systemctl restart bind9
 echo "Testing Caching name server"
 dig -x 127.0.0.1
 
-sudo wget -O /etc/bind/named.conf.local wget https://raw.githubusercontent.com/aftab70/dns_server/master/named.conf.options
+sudo wget -O /etc/bind/named.conf.local https://raw.githubusercontent.com/aftab70/dns_server/master/named.conf.local
+
+
 
 
 
