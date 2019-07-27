@@ -14,8 +14,13 @@ dig -x 127.0.0.1
 sudo wget -O /etc/bind/named.conf.local https://raw.githubusercontent.com/aftab70/dns_server/master/named.conf.local
 sudo touch /etc/bind/for.example.lan
 sudo wget -O /etc/bind/for.example.lan https://raw.githubusercontent.com/aftab70/dns_server/master/for.example.lan
-
-
+sudo wget -O /etc/bind/rev.example.lan https://raw.githubusercontent.com/aftab70/dns_server/master/rev.example.lan
+sudo chmod -R 755 /etc/bind
+sudo chown -R bind:bind /etc/bind
+sudo named-checkconf /etc/bind/named.conf
+sudo named-checkconf /etc/bind/named.conf.local
+sudo named-checkzone ostechnix.lan /etc/bind/for.example.lan
+sudo named-checkzone ostechnix.lan /etc/bind/rev.example.lan
 
 
 
