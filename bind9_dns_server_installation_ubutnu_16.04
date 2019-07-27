@@ -1,1 +1,6 @@
-gfg
+#!/bin/bash
+
+sudo apt-get update -y
+sudo apt-get upgrade -y
+
+sudo apt-get install bind9 bind9utils bind9-doc -y
