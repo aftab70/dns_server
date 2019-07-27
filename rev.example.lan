@@ -1,0 +1,17 @@
+$TTL 86400
+@   IN  SOA     pri.example.lan. root.example.lan. (
+        2011071002  ;Serial
+        3600        ;Refresh
+        1800        ;Retry
+        604800      ;Expire
+        86400       ;Minimum TTL
+)
+@       IN  NS          pri.example.lan.
+@       IN  NS          sec.example.lan.
+@       IN  PTR         example.lan.
+pri     IN  A           192.168.1.1
+sec     IN  A           192.168.1.2
+client  IN  A           192.168.1.3
+1     IN  PTR         pri.example.lan.
+2     IN  PTR         sec.example.lan.
+3     IN  PTR         client.example.lan.
